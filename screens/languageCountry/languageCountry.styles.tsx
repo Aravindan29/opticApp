@@ -4,15 +4,17 @@ export default StyleSheet.create({
     mainContainer: {
         flex: 1,
         flexDirection: 'column',
+        backgroundColor: '#ffff'
     },
 
-    firstContainter: {
-        flex: 0.6,
-        backgroundColor: 'red',
-        borderBottomLeftRadius: 55,
-        borderBottomRightRadius: 55,
-        justifyContent: 'center',
-        alignItems: 'center',
+    subContainter: {
+        // flex: 0.6,
+        // backgroundColor: 'red',
+        // borderBottomLeftRadius: 55,
+        // borderBottomRightRadius: 55,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // margin: 20,
     },
 
     logoText: {
@@ -27,24 +29,28 @@ export default StyleSheet.create({
       },
     
       titleContainer: {
-        alignItems: 'center',
+        margin: 10,
       },
     
       textStyle: {
-        fontSize: 20,
+        fontSize: 15,
       },
     
       languageContainer: {
-        flex: 1,
-        flexDirection: 'column',
-        marginVertical: 10,
-        marginHorizontal: 10,
+        // flex: 1,
+        // flexDirection: 'column',
+        // marginVertical: 10,
+        // marginHorizontal: 10,
       },
     
       buttonRowStartContainer: {
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         marginVertical: 5,
+      },
+
+      counButtonContainer: {
+        margin: 10,
       },
     
       buttonRowEndContainer: {
@@ -55,69 +61,100 @@ export default StyleSheet.create({
     
       buttonContainer: {
         padding: 10,
-        backgroundColor: '#dedede',
+        borderWidth: 1,
+        borderColor: '#79747E',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '50%',
+        width: '45%',
         borderRadius: 20,
-        shadowColor: '#000',
-        elevation: 1,
       },
     
       textBtnStyle: {
         fontSize: 16,
-        fontWeight: '700',
-        color: '#535353',
+        fontWeight: '400',
+        color: '#6750A4',
       },
     
       onSelectBtnContainer: {
         padding: 10,
-        backgroundColor: 'red',
+        backgroundColor: '#F7F2FA',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '50%',
+        width: '45%',
         borderRadius: 20,
-        shadowColor: 'red',
-        elevation: 1,
+        shadowColor: '#000',
+        shadowOffset: { height: 1, width: 15 },
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+        elevation: 4,
       },
     
       onSelectTextBtnStyle: {
         fontSize: 16,
-        color: '#fff',
+        fontWeight: '400',
+        color: '#6750A4',
+      },
+
+      buttonContainerCoun: {
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#79747E',
+        borderRadius: 20,
+      },
+
+      textBtnStyleCoun: {
+        fontSize: 16,
+        fontWeight: '400',
+        color: '#6750A4',
       },
     
-      goButtonContainers: {
-        width: 65,
-        height: 65,
-        borderRadius: 35,
-        borderWidth: 1,
+      onSelectBtnContainerCoun: {
+        padding: 10,
+        backgroundColor: '#F7F2FA',
+        borderRadius: 20,
+        shadowColor: '#000',
+        shadowOffset: { height: 1, width: 15 },
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+        elevation: 4,
+      },
+    
+      onSelectTextBtnStyleCoun: {
+        fontSize: 20,
+        fontWeight: '400',
+        color: '#6750A4',
+      },
+    
+      buttonContainerNxt: {
+        padding: 10,
+        backgroundColor: '#F7F2FA',
+        borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
-        borderColor: '#fff',
-        shadowColor: 'red',
-        shadowRadius: 10,
-        shadowOpacity: 10.6,
-        elevation: 8,
-        shadowOffset: {
-          width: 0,
-          height: 4,
-        },
+        shadowColor: '#000',
+        shadowOffset: { height: 1, width: 15 },
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+        elevation: 4,
+      },
+
+      textBtnStyleNxt: {
+        fontSize: 16,
+        fontWeight: '400',
+        color: '#6750A4',
       },
     
-      goIconStyle: {
-        fontSize: 30,
-        color: 'red',
-      },
-      animatedContainer: {
-        position: 'absolute',
-        top: '88%',
-        bottom: 0,
-        right: 0,
-        left: '68%',
-        marginHorizontal: 25,
-        borderRadius: 50,
-        alignItems: 'flex-end',
+      onSelectBtnContainerNxt: {
+        padding: 10,
+        backgroundColor: '#6750A4',
+        borderRadius: 20,
         justifyContent: 'center',
-      }
+        alignItems: 'center',
+      },
+    
+      onSelectTextBtnStyleNxt: {
+        fontSize: 20,
+        fontWeight: '400',
+        color: '#6750A4',
+      },
 });

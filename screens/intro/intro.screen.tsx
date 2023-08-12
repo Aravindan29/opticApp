@@ -1,12 +1,16 @@
 import { useNavigation, StackActions } from '@react-navigation/native';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+import subStyles from './intro.styles';
 
 const IntroScreen = () => {
     const navigation = useNavigation<any>();
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <TouchableOpacity style={{ backgroundColor: 'red', padding: 10, borderRadius: 15 }} onPress={() => navigation.dispatch(StackActions.replace('LANGCOUNTRY'))}>
-                <Text style={{ color: 'white'}}>Your content goes here</Text>
+        <View style={subStyles.mainContainer}>
+            <View style={subStyles.logTxtContainer}>
+                <Image source={require('../../assets/Images/WideBag.png')} />
+            </View>
+            <TouchableOpacity  style={subStyles.logBtnStyle} onPress={() => navigation.dispatch(StackActions.replace('LANGCOUNTRY'))}>
+                <Image source={require('../../assets/Images/logo.png')} />
             </TouchableOpacity>
         </View>
     )
