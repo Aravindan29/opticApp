@@ -17,12 +17,6 @@ export type LoginParamList = {
 
 export type IntroParamList = {
     INTRO: undefined;
-}
-
-export type LangCountryParamList = {
     LANGCOUNTRY: undefined;
-}
-
-export type DynamicAdParamList = {
     DYNAMICAD: undefined;
 }

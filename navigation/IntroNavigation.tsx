@@ -3,6 +3,8 @@ import { createStackNavigator, TransitionSpecs, HeaderStyleInterpolators } from 
 
 import IntroScreen from '../screens/intro/intro.screen';
 import { IntroParamList } from '../appTypes';
+import LanguageCountryScreen from '../screens/languageCountry/languageCountry.screen';
+import DynamicAdScreen from '../screens/dynamicAd/dynamicAd.screen';
 
 const IntroInitialStack = createStackNavigator<IntroParamList>();
 
@@ -45,6 +47,16 @@ export default function IntroNavigation() {
         name="INTRO"
         options={{ headerShown: false }}
         component={IntroScreen}
+      />
+      <IntroInitialStack.Screen
+        name="LANGCOUNTRY"
+        options={{ headerShown: false }}
+        component={LanguageCountryScreen}
+      />
+      <IntroInitialStack.Screen
+        name="DYNAMICAD"
+        options={{ headerShown: false }}
+        component={DynamicAdScreen}
       />
     </IntroInitialStack.Navigator>
   );

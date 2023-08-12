@@ -103,7 +103,7 @@ const LanguageCountryScreen = () => {
                     </View>
                 </View>
             </View>
-            <TouchableOpacity style={subStyles.goButtonContainers} onPress={() => navigation.dispatch(StackActions.replace('APPDYNAMIC'))}>
+            <TouchableOpacity style={subStyles.goButtonContainers} onPress={() => navigation.dispatch(StackActions.replace('DYNAMICAD'))}>
                 <Ionicons name="md-arrow-forward" style={subStyles.goIconStyle} />
             </TouchableOpacity>
         </SafeAreaView>
