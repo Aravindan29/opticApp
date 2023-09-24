@@ -1,10 +1,15 @@
 import { StyleSheet } from 'react-native';
+import Code from '../../constants/ColorCode';
 
 export default StyleSheet.create({
     mainContainer: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: '#ffff'
+        backgroundColor: Code.white,
+    },
+
+    padding10: {
+      padding: 10,
     },
 
     subContainter: {
@@ -18,7 +23,7 @@ export default StyleSheet.create({
     },
 
     logoText: {
-        color: '#ffffff',
+        color: Code.white,
         fontSize: 35,
         top: '5%',
     },
@@ -48,10 +53,6 @@ export default StyleSheet.create({
         justifyContent: 'space-around',
         marginVertical: 5,
       },
-
-      counButtonContainer: {
-        margin: 10,
-      },
     
       buttonRowEndContainer: {
         flexDirection: 'row',
@@ -62,7 +63,7 @@ export default StyleSheet.create({
       buttonContainer: {
         padding: 10,
         borderWidth: 1,
-        borderColor: '#79747E',
+        borderColor: Code.secondary,
         justifyContent: 'center',
         alignItems: 'center',
         width: '45%',
@@ -72,17 +73,17 @@ export default StyleSheet.create({
       textBtnStyle: {
         fontSize: 16,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
       },
     
       onSelectBtnContainer: {
         padding: 10,
-        backgroundColor: '#F7F2FA',
+        backgroundColor: Code.primary_light,
         justifyContent: 'center',
         alignItems: 'center',
         width: '45%',
         borderRadius: 20,
-        shadowColor: '#000',
+        shadowColor: Code.black,
         shadowOffset: { height: 1, width: 15 },
         shadowOpacity: 1, // IOS
         shadowRadius: 1, //IOS
@@ -92,46 +93,60 @@ export default StyleSheet.create({
       onSelectTextBtnStyle: {
         fontSize: 16,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
       },
 
       buttonContainerCoun: {
         padding: 10,
         borderWidth: 1,
-        borderColor: '#79747E',
+        borderColor: Code.secondary,
         borderRadius: 20,
+        marginVertical: 10,
       },
 
       textBtnStyleCoun: {
         fontSize: 16,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
       },
     
       onSelectBtnContainerCoun: {
         padding: 10,
-        backgroundColor: '#F7F2FA',
+        backgroundColor: Code.primary_light,
         borderRadius: 20,
-        shadowColor: '#000',
+        shadowColor: Code.black,
         shadowOffset: { height: 1, width: 15 },
         shadowOpacity: 1, // IOS
         shadowRadius: 1, //IOS
         elevation: 4,
+        marginVertical: 10,
       },
     
       onSelectTextBtnStyleCoun: {
         fontSize: 20,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
       },
     
+   
+     
+      // SUBMIT SECTION
+      submitContainer: {
+        position: 'absolute',
+        bottom: 0, 
+        top: '90%', 
+        left: 0, 
+        right: 0, 
+        justifyContent: 'center', 
+        margin: 10
+      },   
       buttonContainerNxt: {
         padding: 10,
-        backgroundColor: '#F7F2FA',
+        backgroundColor: Code.primary_light,
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        shadowColor: '#000',
+        shadowColor: Code.black,
         shadowOffset: { height: 1, width: 15 },
         shadowOpacity: 1, // IOS
         shadowRadius: 1, //IOS
@@ -141,12 +156,12 @@ export default StyleSheet.create({
       textBtnStyleNxt: {
         fontSize: 16,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
       },
     
       onSelectBtnContainerNxt: {
         padding: 10,
-        backgroundColor: '#6750A4',
+        backgroundColor: Code.primary,
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -155,6 +170,7 @@ export default StyleSheet.create({
       onSelectTextBtnStyleNxt: {
         fontSize: 20,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
       },
+
 });

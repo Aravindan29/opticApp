@@ -1,31 +1,28 @@
 import { StyleSheet } from 'react-native';
+import Code from '../../constants/ColorCode';
 
 export default StyleSheet.create({
     mainContainer: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: '#ffff'
+        backgroundColor: Code.white
     },
-
-    logTxtContainer: {
-        margin: 60,
-        justifyContent: 'center',
-        alignItems: 'center'
+    // AD SECTION
+    adContainer: {
+        flex: 0.7,
+        justifyContent: 'center'
     },
+    
 
-    imgStyle: {
-        // width: '140%'
-        marginLeft: -15
-    },
-
-    alignStyle: {
-        justifyContent: 'center',
+    // SUBMIT SECTION
+    submitContainer: {
+        flex: 0.3,
         alignItems: 'center',
+        justifyContent: 'center'
     },
-
     btnStyle: {
         padding: 10,
-        backgroundColor: '#F7F2FA',
+        backgroundColor: Code.primary_light,
         width: '45%',
         justifyContent: 'center',
         alignItems: 'center',
@@ -40,6 +37,6 @@ export default StyleSheet.create({
     txtStyle: {
         fontSize: 16,
         fontWeight: '400',
-        color: '#6750A4',
+        color: Code.primary,
     },
 });

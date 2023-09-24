@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
+import Code from '../../constants/ColorCode';
 
 export default StyleSheet.create({
     mainContainer: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: '#ffff'
+        backgroundColor: Code.white
     },
 
     logTxtContainer: {

@@ -1,15 +1,18 @@
 import { useNavigation, StackActions } from '@react-navigation/native';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
+import mainStyle from '../general/general.styles';
 import subStyles from './dynamicAd.styles';
 
 const DynamicAdScreen = () => {
     const navigation = useNavigation<any>();
     return (
-        <View style={subStyles.mainContainer}>
-            <View style={subStyles.logTxtContainer}>
-                <Image style={subStyles.imgStyle} source={require('../../assets/Images/brand.png')} />
+        <View style={mainStyle.mainContainer}>
+            {/* AD SECTION */}
+            <View style={subStyles.adContainer}>
+                <Image source={require('../../assets/Images/brand.png')} />
             </View>
-            <View style={subStyles.alignStyle}>
+            {/* SUBMIT SECTION */}
+            <View style={subStyles.submitContainer}>
                 <TouchableOpacity style={subStyles.btnStyle} onPress={() => navigation.dispatch(StackActions.replace('APPINITAL'))}>
                     <Text style={subStyles.txtStyle}>Enter</Text>
                 </TouchableOpacity>
