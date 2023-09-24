@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigation, StackActions } from '@react-navigation/native';
 import { Appbar } from 'react-native-paper';
 import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native';
-import { Ionicons, Feather, Octicons } from '@expo/vector-icons';
+import { Ionicons, Feather, Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import mainStyle from '../general/general.styles';
 import Code from '../../constants/ColorCode';
 import subStyles from './details.styles';
@@ -46,27 +46,27 @@ const DetailsScreen = () => {
                     <Text style={subStyles.textBoldStyle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                     <Text style={subStyles.textStyle}>Product Details</Text>
                     <View style={subStyles.prodDetailsContainer}>
-                        <Text style={subStyles.textStyle}>PACKAGING</Text>
+                        <Text style={subStyles.textStyle}><Feather name='package' size={18} color={Code.black} /> PACKAGING</Text>
                         <Text style={subStyles.textBoldStyle}>: One box contains 2 lenses</Text>
                     </View>
                     <View style={subStyles.prodDetailsContainer}>
-                        <Text style={subStyles.textStyle}>PEPLACEMENT</Text>
+                        <Text style={subStyles.textStyle}><Ionicons name='checkmark-circle-outline' size={18} color={Code.black} /> PEPLACEMENT</Text>
                         <Text style={subStyles.textBoldStyle}>: 3 Months disposable</Text>
                     </View>
                     <View style={subStyles.prodDetailsContainer}>
-                        <Text style={subStyles.textStyle}>LENS MATERIAL</Text>
+                        <Text style={subStyles.textStyle}><Feather name='circle' size={18} color={Code.black} /> LENS MATERIAL</Text>
                         <Text style={subStyles.textBoldStyle}>: 38%H2o, Polymacon</Text>
                     </View>
                     <View style={subStyles.prodDetailsContainer}>
-                        <Text style={subStyles.textStyle}>LENS SEGMENT</Text>
+                        <Text style={subStyles.textStyle}><Ionicons name='color-palette-outline' size={18} color={Code.black} /> LENS SEGMENT</Text>
                         <Text style={subStyles.textBoldStyle}>: Colored Lens</Text>
                     </View>
                     <View style={subStyles.prodDetailsContainer}>
-                        <Text style={subStyles.textStyle}>DIAMETER</Text>
+                        <Text style={subStyles.textStyle}><MaterialCommunityIcons name='relative-scale' size={18} color={Code.black} /> DIAMETER</Text>
                         <Text style={subStyles.textBoldStyle}>: 14.5</Text>
                     </View>
                     <View style={subStyles.prodDetailsContainer}>
-                        <Text style={subStyles.textStyle}>BASE CURVE</Text>
+                        <Text style={subStyles.textStyle}><Ionicons name='return-up-back-outline' size={18} color={Code.black} /> BASE CURVE</Text>
                         <Text style={subStyles.textBoldStyle}>: 8.6</Text>
                     </View>
                 </View>
