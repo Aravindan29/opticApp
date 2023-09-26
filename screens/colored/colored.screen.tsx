@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigation, StackActions } from '@react-navigation/native';
 import { Appbar } from 'react-native-paper';
-import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, Image, TouchableOpacity, SafeAreaView, FlatList } from 'react-native';
 import { Ionicons, Feather, Octicons, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import mainStyle from '../general/general.styles';
 import Code from '../../constants/ColorCode';
@@ -20,6 +20,20 @@ const ColoredScreen = () => {
         glowHeart: false,
     });
     const { selectedCate, diamondHeart, eliteHeart, dsHeart, glowHeart } = localeState;
+
+    const loadRenderData = ({ item }) => {
+        return (
+            <View key={item.label} style={subStyles.btnContainer}>
+                <TouchableOpacity
+                    style={item.value === selectedCate ? subStyles.onSelectBtnContainer : subStyles.buttonContainer}
+                    onPress={() => setLocaleState({ ...localeState, selectedCate: item.value })}
+                    key={item.label}
+                >
+                    <Text style={item.value === selectedCate ? subStyles.onSelectTextBtnStyle : subStyles.textBtnStyle}>{item.label}</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    };
 
     const favDiamond = () => {
         if (diamondHeart === false) {
@@ -61,20 +75,21 @@ const ColoredScreen = () => {
                 <Appbar.Action icon="heart-outline" onPress={() => navigation.dispatch(StackActions.replace('FILTER'))} />
                 <Appbar.Action icon="shopping-outline" onPress={() => navigation.dispatch(StackActions.replace('NOTIFICATION'))} />
             </Appbar.Header>
-            <ScrollView style={subStyles.scrollFlex} horizontal showsHorizontalScrollIndicator={false}>
-                {coloredCategoryList.map((item) => (
-                    <View key={item.label} style={subStyles.btnContainer}>
-                        <TouchableOpacity
-                            style={item.value === selectedCate ? subStyles.onSelectBtnContainer : subStyles.buttonContainer}
-                            onPress={() => setLocaleState({ ...localeState, selectedCate: item.value })}
-                            key={item.label}
-                        >
-                            <Text style={item.value === selectedCate ? subStyles.onSelectTextBtnStyle : subStyles.textBtnStyle}>{item.label}</Text>
-                        </TouchableOpacity>
-                    </View>
-                ))}
-            </ScrollView>
             <ScrollView style={subStyles.secondScroll}>
+                <View>
+                    {coloredCategoryList !== null && coloredCategoryList !== undefined ?
+                        <FlatList
+                            horizontal
+                            pagingEnabled={true}
+                            showsHorizontalScrollIndicator={false}
+                            legacyImplementation={false}
+                            data={coloredCategoryList}
+                            renderItem={(item) => loadRenderData(item)}
+                            keyExtractor={item => item.label}
+                            style={subStyles.scrollFlex}
+                        />
+                        : null}
+                </View>
                 <View style={subStyles.imageContainer}>
                     {selectedCate === 'ALL' || selectedCate === 'DNC' || selectedCate === 'DIAMONDS' ? <View>
                         <TouchableOpacity style={subStyles.imageTopTextContainer} onPress={favDiamond}>

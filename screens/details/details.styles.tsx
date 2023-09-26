@@ -97,4 +97,63 @@ export default StyleSheet.create({
     color: Code.white,
   },
 
+  textSelectBtnStyle: {
+    fontSize: 12,
+    fontWeight: '400',
+    color: Code.white,
+  },
+
+  // MODAL SECTION
+  modelContainer: {
+    padding: 25,
+    backgroundColor:Code.white,
+    shadowColor: Code.black,
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.4,
+    shadowRadius: 3,
+    elevation: 5,
+    borderRadius: 10,
+    marginBottom: 20,
+    borderColor: Code.gray,
+    borderWidth: 0.3,
+  },
+
+  modelTitleTxt: {
+    fontSize: 16,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+
+  modalBtnRowContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginVertical: 5,
+  },
+
+  modalButtonContainer: {
+    padding: 10,
+    backgroundColor: Code.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '45%',
+  },
+
+  modalButtonBtmContainer: {
+    padding: 10,
+    backgroundColor: Code.cancel,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '45%',
+    borderRadius: 20,
+  },
+
+  modalButtonBtmContainerScnd: {
+    padding: 10,
+    backgroundColor: Code.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '45%',
+    borderRadius: 20,
+  },
+
 });

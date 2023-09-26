@@ -88,3 +88,66 @@ export const coloredCategoryList = [
         value: 'BO',
     },
 ];
+
+export const eyePower = [
+    {
+        label: '0.00',
+        value: '0.00',
+    },
+    {
+        label: '-0.50',
+        value: '-0.50',
+    },
+    {
+        label: '-0.70',
+        value: '-0.70',
+    },
+    {
+        label: '-1.00',
+        value: '-1.00',
+    },
+    {
+        label: '-1.25',
+        value: '-1.25',
+    },
+    {
+        label: '-1.50',
+        value: '-1.50',
+    },
+    {
+        label: '-1.75',
+        value: '-1.75',
+    },
+    {
+        label: '-2.00',
+        value: '-2.00',
+    },
+    {
+        label: '-2.25',
+        value: '-2.25',
+    },
+    {
+        label: '-2.50',
+        value: '-2.50',
+    },
+    {
+        label: '-2.75',
+        value: '-2.75',
+    },
+    {
+        label: '-3.00',
+        value: '-3.00',
+    },
+    {
+        label: '-3.25',
+        value: '-3.25',
+    },
+    {
+        label: '-3.50',
+        value: '-3.50',
+    },
+    {
+        label: '-3.75',
+        value: '-3.75',
+    },
+];

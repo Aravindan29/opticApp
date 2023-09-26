@@ -22,6 +22,7 @@ const Code = {
     violet_light: '#E8DEF8',
     violet_light_G: '#F3EDF7',
     disable: '#777777',
+    cancel: '#FFD8D8',
   };
   
   export default Code;

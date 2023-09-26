@@ -2,6 +2,7 @@ import LoginActionType from './login.types';
 
 const INITIAL_STATE = {
   loginStatus: null,
+  cartListArr: [],
 };
 
 export default (state = INITIAL_STATE, action: any) => {
@@ -23,7 +24,20 @@ export default (state = INITIAL_STATE, action: any) => {
         ...state,
         loginStatus: null,
       };
+
+    // PERSIST DATA
+    case LoginActionType.ADD_CART_PERSIST_DATA:
+      return {
+        ...state,
+        cartListArr: action.payload,
+      };
+
+    case LoginActionType.REMOVE_CART_DATA:
+      return {
+        ...state,
+        cartListArr: null,
+      };
     default:
-      return state;
-  }
+      return state;
+  }
 };

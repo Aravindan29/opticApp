@@ -13,6 +13,7 @@ import NotificationNavigation from './NotificationNavigation';
 import CollectionNavigation from './CollectionNavigation';
 import ColoredNavigation from './ColoredNavigation';
 import DetailsNavigation from './DetailsNavigation';
+import ShopBagNavigation from './ShopBagNavigation';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -36,6 +37,7 @@ function RootNavigator() {
         <Stack.Screen name="COLLECTION" component={CollectionNavigation} />
         <Stack.Screen name="COLORED" component={ColoredNavigation} />
         <Stack.Screen name="DETAILS" component={DetailsNavigation} />
+        <Stack.Screen name="SHOPBAG" component={ShopBagNavigation} />
       </Stack.Navigator>
   );
 };

@@ -13,3 +13,8 @@ export const selectCurrentUserStatus = createSelector(
   [selectUser],
   (login) => login.loginStatus,
 );
+
+export const cartFilterItems = createSelector(
+  [selectUser],
+  (login) => login.cartListArr,
+);
